@@ -4,6 +4,10 @@
 
 This project is a secure, UDP-based chat client developed in Python. It features a graphical user interface (GUI) built using `customtkinter` and supports encrypted communication using an adapted WireGuard-like protocol. The application follows a modular architecture that separates encryption, networking, and user interface components, ensuring clarity, maintainability, and reusability.
 
+---
+![Application GUI](/screenshots/scrn1.png)
+---
+
 ## Architecture Overview
 
 The system is composed of four main modules:
@@ -12,6 +16,8 @@ The system is composed of four main modules:
 - **Encryption Manager**: Manages the session lifecycle, including handshakes, transport key derivation, and secure message encryption/decryption.
 - **Chat Client**: Handles all UDP networking logic, message construction, request handling, and background listening.
 - **GUI**: Built with `customtkinter`, this module presents the user interface and handles all user interactions. It communicates with the client and encryption modules but does not manage networking or security directly.
+
+---
 
 ## Chat Protocol Support
 
@@ -30,6 +36,8 @@ Additional features include:
 - Full support for request/response formatting and message parsing
 - Context-aware feedback and timestamped chat messages
 
+---
+
 ## Encryption Details
 
 The encryption system adapts the WireGuard protocol for secure messaging:
@@ -38,6 +46,8 @@ The encryption system adapts the WireGuard protocol for secure messaging:
 - Handshake logic involves an initiation and response phase to derive shared session keys.
 - Key derivation is performed using a combination of static/ephemeral keys and a KDF.
 - Once the handshake is complete, encrypted messages are exchanged over UDP using the derived session keys.
+
+---
 
 ## User Interface & Features
 
@@ -51,6 +61,8 @@ The encryption system adapts the WireGuard protocol for secure messaging:
 - Clickable usernames to prefill direct message inputs
 - Distinct error and success notifications
 
+---
+
 ## Code Quality Highlights
 
 - Clear separation of concerns across encryption, networking, and UI
@@ -58,11 +70,15 @@ The encryption system adapts the WireGuard protocol for secure messaging:
 - Robust exception handling in networking threads
 - Descriptive function names and meaningful comments
 
+---
+
 ## Contributors
 
 - Julyan van der Westhuizen (VWSJUL003)  
 - Keegan O’Brien (OBRKEE001)  
 - Angelo Yang (YNGANG003)
+
+---
 
 ## Usage
 1. Clone the repository and navigate to the root directory 
